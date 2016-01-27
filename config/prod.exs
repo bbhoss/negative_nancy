@@ -13,8 +13,9 @@ use Mix.Config
 # which you typically run after static files are built.
 config :negative_nancy, NegativeNancy.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/manifest.json"
+  url: [host: "negative-nancy.herokuapp.com", port: 80],
+  cache_static_manifest: "priv/static/manifest.json",
+  check_origin: false # TODO: Check this manually for security
 
 # Do not print debug messages in production
 config :logger, level: :info
